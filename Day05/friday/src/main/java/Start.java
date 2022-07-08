@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 class Strat{
     public static void main(String[] z){
-        Ellipse e;
-        e = new Ellipse(8.0, 5.0);
-        double a = e.getArea();
-        System.out.println(a);
+        Cashier c = new Cashier(270.0);
+        double total = c.getTotal();
+        System.out.println(total);
+        // Discount 5% for price at least 100.0
     }
     
 }
@@ -19,7 +19,20 @@ class Ellipse {
     double major;
     double minor;
     double getArea(){
-        return Math.PI * major * minor;
+        return Math.PI * major * minor;     // Pi * r
     }
     
 }
+
+class Cashier{
+    Cashier(double c){
+        cash = c;
+    }
+    double cash;
+    double getTotal(){
+        if( cash > 100) 
+        return cash * 0.95;
+        return 0;
+    }
+}
+
