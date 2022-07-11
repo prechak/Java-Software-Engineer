@@ -6,12 +6,17 @@ class Start{
         System.out.print("Enter Binary String: ");
         String line = in.nextLine();
         char[] a = line.toCharArray();
-        int i = 0;
         int count = 0;
-        do {
-            System.out.println(a[i]);
-            i++;
-        } while(i < a.length);
+        for(int i = 0; i < a.length; i++) {
+            if(a[i] == '0'){        //  เจอ 0 ก็นับต่อไป
+                count++;
+            }
+            if(a[i] == '1'){        // เจอ 1 reset
+                System.out.println(count);
+                count = 0;          // เจอ 1 แล้ว reset
+            }
+        }
+        
         
     }
 }
