@@ -8,10 +8,10 @@ class Start{
         char[] a = line.toCharArray();
         int i = 0;
         int count = 0;
-        while(i < a.length){
+        do {
             System.out.println(a[i]);
             i++;
-        }
+        } while(i < a.length);
         
     }
 }
