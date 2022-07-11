@@ -116,3 +116,18 @@ class Vote{
         
     }
 }
+
+___________________________
+
+Spring Dependency ! Maven Dependency
+
+In class not in code
+
+custom folder : monday
+'-- pom.xml
+'-- code
+'	'-- Start.java
+'--data
+'	'-- configuration.xml
+'-- test
+	'-- Test.java
