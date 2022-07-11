@@ -2,7 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.18.xsd
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
 ">
+    
+    <bean id="front" class="Cashier">
+        <property name="tax" value="15.0"/>
+    </bean>
 
+    <bean id="test" class="Cashier">
+        <property name="tax" value="17.5"/>
+    </bean>
+    
 </beans>

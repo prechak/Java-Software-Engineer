@@ -1,28 +1,33 @@
 import java.util.*; // java.util.Scanner input = new java.util.Scanner(System.in);
+import org.springframework.context.ApplicationContext;
+//import org.springframework.context.support.ClassPathXmlApplicationContext; // ถ้าทำถูกมันจะ import ได้
+
 
 class Start{
     public static void main(String[] z){
-        Vote[] d = new Vote[3];
-        d[0] = new Vote("Democrat", 82);
-        d[1] = new Vote("Labor", 85);
-        d[2] = new Vote("Liberty", 83);
-        int total = 0;
-        for(int i = 0; i < d.length; i++)
-            total = total + d[i].point;            // ได้คะแนนรวมมาแล้ว
-        for(int i = 0; i < d.length; i++){
-            double percent = (double)d[i].point / total * 100 ;
-        
-        System.out.printf("%s %.2f\n", d[i].party, percent);
-        }
+        ApplicationContext context;
+        context = new ClassPathXmlApplicationContext("configuration.xml")
+        Cashier primary = (Cashier)context.getBean("front");
+        double total = primary.showTotal(200);
+        System.out.println("Total is " + total);
+    
+    
     }
 }
 
-class Vote{
-    String party;
-    int point;
-    Vote(String p, int s){
-        party = p;
-        point = s;
+class Cashier{
+    double multiplier = 1.0; // Field
+    
+    public void setTax(double t){       // Writable Property
+        multiplier = (100.0 + t) / 100.0 ;
         
     }
-}
+    double showTotal(double price){
+        return price * multiplier;
+    }
+}   // active
+    // passive - inversion of control 
+    //  -timer
+    //  -configuration
+    // application = program
+    // context = environment (in spring call application context)
