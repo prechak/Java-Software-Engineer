@@ -35,7 +35,7 @@ String t = "I love you";					// ไม่ต้องจอง มันเก�
 
 ]
 
-custom folder
+custom folder : monday
 '-- pom.xml
 '-- code
 '	'-- Start.java
@@ -45,21 +45,74 @@ custom folder
 FILE: pom.xml
 <project>
 	<modelVersion> 4.0.0 </modelVersion>
-	<groupId>iCoffee</groudId>
-	<artifactId> 0.85 </version>
+	<groupId>iCoffee</groupId>
+	<artifactId> com.precha </artifactId>
+        <version> 0.77 </version>
 
 	<properties>
-		<maven.compiler.source> 18 </maven.complier.source>
-		<maven.compiler.target> 18 </maven.complier.target>
+		<maven.compiler.source> 18 </maven.compiler.source>
+		<maven.compiler.target> 18 </maven.compiler.target>
 	</properties>
 
 	<build>
-		<sourecDirectory> code </sourseDirectory>
+		<sourceDirectory> code </sourceDirectory>
 		<testSourceDirectory> test </testSourceDirectory>
 	</build>
 
 </project>
 
+_____________________________________
+
+Given a binary string, write code to find all
+consecutive 0-block and the longest block.
+
+Enter Binary String: 00100010
+					  2   3 1
+
+output: 
+
+2
+3
+1
+The longest is 3
 
 
 
+Mission|
+https://codestar.work/mission-cloud.pdf
+https://artfully.app/check.html
+
+______________________________________
+
+Sentinel คือ ข้อมูลตัวสุดท้ายที่ทำให้โปรแกรมทำงาน
+
+______________________________________
+
+import java.util.*; // java.util.Scanner input = new java.util.Scanner(System.in);
+
+class Start{
+    public static void main(String[] z){
+        Vote[] d = new Vote[3];
+        d[0] = new Vote("Democrat", 82);
+        d[1] = new Vote("Labor", 85);
+        d[2] = new Vote("Liberty", 83);
+        int total = 0;
+        for(int i = 0; i < d.length; i++)
+            total = total + d[i].point;            // ได้คะแนนรวมมาแล้ว
+        for(int i = 0; i < d.length; i++){
+            double percent = (double)d[i].point / total * 100 ;
+        
+        System.out.printf("%s %.2f\n", d[i].party, percent);
+        }
+    }
+}
+
+class Vote{
+    String party;
+    int point;
+    Vote(String p, int s){
+        party = p;
+        point = s;
+        
+    }
+}

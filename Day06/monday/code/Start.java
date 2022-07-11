@@ -1,24 +1,28 @@
-import java.util.*;
+import java.util.*; // java.util.Scanner input = new java.util.Scanner(System.in);
 
 class Start{
     public static void main(String[] z){
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter Binary String: ");
-        String line = in.nextLine();
-        line = line + '1';
-        char[] a = line.toCharArray();
-        int count = 0;
-        for(int i = 0; i < a.length; i++) {
-            if(a[i] == '0'){        //  เจอ 0 ก็นับต่อไป
-                count++;
-            }
-            if(a[i] == '1'){        // เจอ 1 reset
-                System.out.println(count);
-                count = 0;          // เจอ 1 แล้ว reset
-            }
+        Vote[] d = new Vote[3];
+        d[0] = new Vote("Democrat", 82);
+        d[1] = new Vote("Labor", 85);
+        d[2] = new Vote("Liberty", 83);
+        int total = 0;
+        for(int i = 0; i < d.length; i++)
+            total = total + d[i].point;            // ได้คะแนนรวมมาแล้ว
+        for(int i = 0; i < d.length; i++){
+            double percent = (double)d[i].point / total * 100 ;
+        
+        System.out.printf("%s %.2f\n", d[i].party, percent);
         }
-        //System.out.println(count);  // print last block
+    }
+}
+
+class Vote{
+    String party;
+    int point;
+    Vote(String p, int s){
+        party = p;
+        point = s;
         
     }
-}   // 00010010000 + 1 add Sentinel > 00010010000
-    //    3  2    > last block not print should be 4
+}
