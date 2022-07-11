@@ -16,7 +16,8 @@ class Start{
                 count = 0;          // เจอ 1 แล้ว reset
             }
         }
-        
+        System.out.println(count);
         
     }
-}
+}   // 00010010000
+    //    3  2    > last block not print should be 4
