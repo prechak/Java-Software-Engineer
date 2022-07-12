@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>work.codestar</groupId>
-    <artifactId>spring-sample</artifactId>
+    <artifactId>sample-12</artifactId>
     <version>demo</version>
     
     <repositories>

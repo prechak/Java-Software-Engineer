@@ -1,23 +1,26 @@
 package main;
+import org.springframework.context.ApplicationContext;
 import org.springframework.core.SpringVersion;
 import org.springframework.context.support.GenericApplicationContext;
 
 class Start {
     public static void main(String[] data) {
-        var version = SpringVersion.getVersion();
-        System.out.println(version);
-        
-        var context = new GenericApplicationContext();
-        context.registerBean(SimpleBean.class);
-        
-        var all = context.getBeanDefinitionNames();
-        for (var s : all) {
-            System.out.println(s);
-        }
+        GenericApplicationContext context;
+        context = new GenericApplicationContext();
+        context.registerBean(Party.class);
     }
 }
 
 
-class SimpleBean {
-    
+class Party {
+    int point;
+    void setName(String name){  // Writable property
+        
+    }
+    void setPoint(int point){   // When hava set is Writable property
+        this.point = point;
+    }
+    boolean isOK(){
+        return point >= 50;     // Readable
+    }
 }
