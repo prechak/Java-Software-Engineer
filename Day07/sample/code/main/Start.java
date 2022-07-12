@@ -49,6 +49,7 @@ class Department{
         
     }
     Cashier cashier;
+    Company company;
     
     void setCashier(Cashier c){
         cashier = c;
