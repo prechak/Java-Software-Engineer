@@ -11,11 +11,25 @@ class Start {
         context.registerBean(Cashier.class);
         context.registerBean(Department.class);
         context.refresh();
+        setup s = new Setup(context);
+        s.start();
         
         Department d = context.getBean(Department.class);
         double total = d.cashier.getTotal(120);
         System.out.println(total);
         
+    }
+}
+
+class Setup{
+    Setup(GenericApplicationContext c){
+        context = c;
+    }
+    GenericApplicationContext context;
+    void Start(){
+        Cashier c = context.getBean(Cashier.class);
+        Department d = context.getBean(Department.class);
+        d.cashier = c;      // Dependency Injection
     }
 }
 
