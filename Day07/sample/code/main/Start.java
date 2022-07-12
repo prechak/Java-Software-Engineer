@@ -8,22 +8,28 @@ class Start {
         GenericApplicationContext context;
         context = new GenericApplicationContext();
         context.registerBean(Party.class);
-        //context.registerBean(Member.class);
+        context.registerBean(Member.class);
+        context.registerBean(Cashier.class);
         context.refresh();
         
-        Setup s = new Setup(context);
-        s.go();
-        
-        Party p = (Party)context.getBean(Party.class);
-        //p.setName("Liberty");
-        //p.setPoint(72);
-        System.out.println( p.isOK() );
-
-        String[] all = context.getBeanDefinitionNames();
-        for(int i = 0; i < all.length; i++){
-            System.out.println( all[i] );
-        }
                
+    }
+}
+
+class Cashier{
+    double thereshold = 100;
+    void setThresold(double t){
+        thereshold = t;
+    }
+    double getTheresold(){
+        return thereshold;
+    }
+    double getTotal(double price){
+        if(price >= thereshold){
+            return price * 0.95;
+            
+        }
+        return price;
     }
 }
 
@@ -51,3 +57,5 @@ class Party {
         return point >= 50;     // Readable
     }
 }
+
+class Member{}
