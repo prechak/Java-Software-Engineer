@@ -1,0 +1,36 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>work.codestar</groupId>
+    <artifactId>spring-sample</artifactId>
+    <version>demo</version>
+    
+    <repositories>
+        <repository>
+            <id>spring</id>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+    </repositories>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.0.0-M3</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <sourceDirectory>code</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
+            <resources>
+                <resource>
+                    <directory>web</directory>
+                </resource>
+            </resources>
+        </build>
+        
+    <properties>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+</properties>
+</project>
