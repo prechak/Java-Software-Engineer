@@ -11,8 +11,8 @@ class Start {
         context.registerBean(Cashier.class);
         context.registerBean(Department.class);
         context.refresh();
-        setup s = new Setup(context);
-        s.start();
+        Setup s = new Setup(context);
+        s.Start();
         
         Department d = context.getBean(Department.class);
         double total = d.cashier.getTotal(120);
