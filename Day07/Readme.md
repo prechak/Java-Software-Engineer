@@ -26,13 +26,20 @@ Spring Framework
 - Inversion of Control [IoC]	(XML, Code)
 - Aspect-Oriented Programming	(AOP)
 
-Spring Dependency Injection --->	การ Setup Address ให้ทำงานได้
+Spring Dependency Injection --->	การ Setup Address ของ Instance ให้ทำงานร่วมกันได้
+บางคนเรียกว่า Wiring
 
 Maven Dependency มักจะหมายถึง Package เพิ่มเติมที่ต้องใช้
 	<dependencies>
 		<dependency> ... </dependency>
 		<dependency> ... </dependency>
 	</dependencies> 
+
+Constructor Injection
+
+https://codestar.work/mission-cloud.pdf
+
+https://artfully.app/report.jsp
 
 
 
