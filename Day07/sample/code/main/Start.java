@@ -20,12 +20,13 @@ class Start {
 }
 
 class Department{
-    Department(Cashier c){
-        cashier = c;
-    }
-    
     //@Autowired 
     Cashier cashier;
+    
+    @Autowired
+    void setCashier(Cashier c){
+        cashier = c;
+    }
     
     String name;
     void setName(String n){
