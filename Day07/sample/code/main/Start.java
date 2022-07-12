@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.SpringVersion;
 import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.stereotype.Component;
 
 class Start {
     public static void main(String[] data) {
@@ -11,9 +12,9 @@ class Start {
         context.registerBean(Cashier.class);
         context.registerBean(Department.class);
         context.refresh();
-        Setup s = new Setup(context);
-        s.Start();
-        
+//        Setup s = new Setup(context);
+//        s.Start();
+//        
         Department d = context.getBean(Department.class);
         double total = d.cashier.getTotal(120);
         System.out.println(total);
@@ -30,14 +31,16 @@ class Setup{
         Cashier c = context.getBean(Cashier.class);
         Department d = context.getBean(Department.class);
         d.cashier = c;      // Dependency Injection
+        //d.setCashier(c);
     }
 }
 
 class Department{
-    //@Autowired 
+    public Department(Cashier c) {
+        cashier = c;
+    }
     Cashier cashier;
     
-    @Autowired
     void setCashier(Cashier c){
         cashier = c;
     }
