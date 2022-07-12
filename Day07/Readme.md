@@ -25,7 +25,14 @@ ClassPathXmlApplicationContext		//Must Know
 Spring Framework
 - Inversion of Control [IoC]	(XML, Code)
 - Aspect-Oriented Programming	(AOP)
-- 
+
+Spring Dependency Injection --->	การ Setup Address ให้ทำงานได้
+
+Maven Dependency มักจะหมายถึง Package เพิ่มเติมที่ต้องใช้
+	<dependencies>
+		<dependency> ... </dependency>
+		<dependency> ... </dependency>
+	</dependencies> 
 
 
 

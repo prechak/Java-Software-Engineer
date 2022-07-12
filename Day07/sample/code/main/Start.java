@@ -1,4 +1,5 @@
 package main;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.SpringVersion;
 import org.springframework.context.support.GenericApplicationContext;
@@ -7,18 +8,26 @@ class Start {
     public static void main(String[] data) {
         GenericApplicationContext context;
         context = new GenericApplicationContext();
-        context.registerBean(Party.class);
-        context.registerBean(Member.class);
         context.registerBean(Cashier.class);
+        context.registerBean(Department.class);
         context.refresh();
         
-        Setup s = new Setup(context);
-        s.go();
+        Department d = context.getBean(Department.class);
+        double total = d.cashier.getTotal(120);
+        System.out.println(total);
         
-        Cashier c = context.getBean(Cashier.class);
-        double total = c.getTotal(120.0);
-        System.out.println( total );
-               
+    }
+}
+
+class Department{
+    @Autowired Cashier cashier;
+    
+    String name;
+    void setName(String n){
+        name = n;
+    }
+    String getName(){
+        return name;
     }
 }
 
@@ -38,32 +47,3 @@ class Cashier{
         return price;
     }
 }
-
-class Setup {
-    Setup(GenericApplicationContext c){
-        context = c;
-    }
-    GenericApplicationContext context;
-    void go(){
-//        Party p = (Party)context.getBean(Party.class);
-//        p.setName("Liberty");
-//        p.setPoint(42);
-        Cashier c = context.getBean(Cashier.class);
-        c.setThresold(200);
-    }
-}
-
-class Party {
-    int point;
-    public void setName(String name){  // Writable property
-        
-    }
-    public void setPoint(int point){   // When hava set is Writable property
-        this.point = point;
-    }
-    public boolean isOK(){
-        return point >= 50;     // Readable
-    }
-}
-
-class Member{}
