@@ -11,11 +11,13 @@ class Start {
         context = new GenericApplicationContext();
         context.registerBean(Cashier.class);
         context.registerBean(Department.class);
+        context.registerBean(Company.class);
         context.refresh();
 //        Setup s = new Setup(context);
 //        s.Start();
 //        
         Department d = context.getBean(Department.class);
+        System.out.println(d.company.name);
         double total = d.cashier.getTotal(120);
         System.out.println(total);
         
@@ -35,9 +37,16 @@ class Setup{
     }
 }
 
+class Company{
+    String name = "iCoffee";
+}
+
 class Department{
-    public Department(Cashier c) {
+    public Department(Cashier c, Company cmp) {
+        
         cashier = c;
+        company = cmp;
+        
     }
     Cashier cashier;
     
