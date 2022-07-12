@@ -12,12 +12,18 @@ class Start {
         context.registerBean(Cashier.class);
         context.refresh();
         
+        Setup s = new Setup(context);
+        s.go();
+        
+        Cashier c = context.getBean(Cashier.class);
+        double total = c.getTotal(120.0);
+        System.out.println( total );
                
     }
 }
 
 class Cashier{
-    double thereshold = 100;
+    double thereshold = 100;    // Default
     void setThresold(double t){
         thereshold = t;
     }
@@ -39,9 +45,11 @@ class Setup {
     }
     GenericApplicationContext context;
     void go(){
-        Party p = (Party)context.getBean(Party.class);
-        p.setName("Liberty");
-        p.setPoint(42);
+//        Party p = (Party)context.getBean(Party.class);
+//        p.setName("Liberty");
+//        p.setPoint(42);
+        Cashier c = context.getBean(Cashier.class);
+        c.setThresold(200);
     }
 }
 
