@@ -8,19 +8,20 @@ class Start {
         GenericApplicationContext context;
         context = new GenericApplicationContext();
         context.registerBean(Party.class);
-    }
-}
-
-
-class Party {
-    int point;
-    void setName(String name){  // Writable property
+        context.registerBean(Member.class);
+        context.refresh();
         
-    }
-    void setPoint(int point){   // When hava set is Writable property
-        this.point = point;
-    }
-    boolean isOK(){
-        return point >= 50;     // Readable
+        Party p = (Party)context.getBean(Party.class);
+        p.setName("Liberty");
+        p.setPoint(72);
+        System.out.println( p.isOK() );
+
+        String[] all = context.getBeanDefinitionNames();
+        for(int i = 0; i < all.length; i++){
+            //System.out.println( all[i] );
+        }
+               
     }
 }
+
+class Member {}
