@@ -25,9 +25,14 @@ class Setup {
 @RestController
 class Sample {
     
-    @RequestMapping("/check")
+    @RequestMapping("/check") // http://localhost:8080/check
     double showCheck(){
         return 123.4567;
+    }
+    // http://localhost:8080/get-total?price=150
+    @RequestMapping("/get-total")
+    double showTotal(double price){
+        return 1.15 * price;
     }
 }
 
