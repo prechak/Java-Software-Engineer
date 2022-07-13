@@ -13,7 +13,7 @@ class Start {
                                         (Setup.class);
         Cashier c = context.getBean(Cashier.class);
         double total = c.getTotal(180.0);
-        System.out.println(total);
+        System.out.printf("%.2f\n", total);
     }
 }
 
