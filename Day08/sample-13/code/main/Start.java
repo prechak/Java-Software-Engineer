@@ -1,37 +1,30 @@
 package main;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.SpringVersion;
-import org.springframework.context.support.GenericApplicationContext;
+
 
 class Start {
     public static void main(String[] data) {
         ApplicationContext context;
-        context = new AnnotationConfigApplicationContext
-                                        (Setup.class);
-        //Cashier c = context.getBean(Cashier.class);
-        Cashier c = (Cashier) context.getBean("xxx");
-        double total = c.getTotal(180.0);
-        System.out.printf("%.2f\n", total);
+        context = SpringApplication.run(Setup.class);
+        Cashier c = context.getBean(Cashier.class);
+        double t = c.getTotal(180.0);
+        System.out.println(t);
+        SpringApplication.exit(context);
+        
     }
 }
 
-//@Configuration ไส่ไม่ใส่ก็ได้
+@SpringBootApplication
 class Setup {
-    @Bean 
-        Cashier xxx(){
+    @Bean Cashier createCashier(){
         Cashier c = new Cashier();
-        c.setTax(15.0);
+        c.setTax(20.0);
         return c;
     }
-    @Bean 
-        Cashier yyy(){
-        Cashier c = new Cashier();
-        c.setTax(10.0);
-        return c;
-    }
+    
     
 }
 
