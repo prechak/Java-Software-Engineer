@@ -1,13 +1,13 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.precha</groupId>
-    <artifactId>sample-13</artifactId>
-    <version>demo</version>
+    <groupId>jp.co.nitendo</groupId>
+    <artifactId>member-system</artifactId>
+    <version>0.5</version>
     
     <repositories>
         <repository>
             <id>spring</id>
-            <url>https://repo.spring.io/milestone</url>
+            <url>https://repo.spring.io</url>
         </repository>
     </repositories>
     
