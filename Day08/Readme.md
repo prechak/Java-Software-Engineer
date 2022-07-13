@@ -86,9 +86,10 @@ Recommend MVC for Large Web Project
 Context ~ Environment
 
 
-ClassPathXmlApplicationContext	~ Configure from XML file
-GenericApplicationContext		~ Register Bean Manually
-									- Constructor Injection
+ClassPathXmlApplicationContext			~ Configure from XML file
+GenericApplicationContext				~ Register Bean Manually
+											- Constructor Injection
+AnnotationConfigApplicationContext		~ Use Annotation to create bean
 
 
 Dependency Injection			~ setup address of instance
@@ -115,3 +116,11 @@ MVC - Model View Controller ~ 3 part
 		'--> main()
 		'--> Setup (Initialize)
 		'--> Controller (Web Service have only Controller)
+
+@Annitation is keyword ใน Java มี Keyword อยู่ 59 คำ
+				ซึ่งน้อยมาก ไม่เพียงพอต่อการใช้งาน
+				มันมีวิธีสร้าง Keyword ขึ้นมาใหม่
+				Keyword ที่สร้างขึ้นพวกนี้ เรียกว่า Annotation
+				ตัวอย่างของ Annotation ที่ Java สร้างไว้
+				@Deprecated และ @Override				//@Deprecated คือยกเลิก
+				
