@@ -11,7 +11,8 @@ class Start {
         ApplicationContext context;
         context = new AnnotationConfigApplicationContext
                                         (Setup.class);
-        Cashier c = context.getBean(Cashier.class);
+        //Cashier c = context.getBean(Cashier.class);
+        Cashier c = (Cashier) context.getBean("last");
         double total = c.getTotal(180.0);
         System.out.printf("%.2f\n", total);
     }
@@ -20,9 +21,15 @@ class Start {
 //@Configuration ไส่ไม่ใส่ก็ได้
 class Setup {
     @Bean 
-        Cashier createCashier(){
+        Cashier first(){
         Cashier c = new Cashier();
         c.setTax(15.0);
+        return c;
+    }
+    @Bean 
+        Cashier last(){
+        Cashier c = new Cashier();
+        c.setTax(10.0);
         return c;
     }
     
