@@ -34,6 +34,19 @@ class Sample {
     double showTotal(double price){
         return 1.15 * price;
     }
+    // http://locathost:8080/find-branch?city=Bangkok
+    
+    String[] branches = {"Bangkok", "London", "New York", "Paris" };
+    @RequestMapping("/find-branch")
+    boolean search(String city){
+        boolean result = false;
+        for(int i = 0; i < branches.length; i++){
+            if(branches[i].equals(city)) {
+                result = true;
+            }
+        }
+        return result;
+    }
 }
 
 class Cashier {
