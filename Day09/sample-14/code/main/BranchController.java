@@ -8,22 +8,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class BranchController{
     
-    BranchController(Team t, @Qualifier("second")Manager m){
-        this.team = t;
-        this.manager = m;
-        System.out.println( m.getName() );
-    }
     
     Manager manager;
     Team team;
     
-    @Autowired @Qualifier("first") Manager m;
+    @Autowired
+    void setTeam(Team t){
+        team = t;
+    }
     
-    @Autowired Team t;
-    
+    @Autowired //@Qualifier("second") --> can use
+    void setManager(@Qualifier("first") Manager m){
+        manager = m;
+    }
+
     @RequestMapping("/get-iso-team-name")
     String getTeamName(){
-        return t.getName();
+        return team.getName();
     }
     
     @RequestMapping("/list-branch")
