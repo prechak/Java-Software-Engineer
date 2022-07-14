@@ -22,7 +22,7 @@ class Start{
 @SpringBootApplication
 class Setup{
     @Bean("primary")
-    Team createTeam(@Qualifier("first")Manager m){      //parameter injection
+    Team createTeam(@Qualifier("second")Manager m){      //parameter injection
         Team t = new Team();
         t.setName("Laliga - Barcelona");
         t.setManager(m);
