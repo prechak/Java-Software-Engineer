@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 class BranchController{
     
     BranchController(Team t, @Qualifier("second")Manager m){
-        this.t = t;
-        this.m = m;
+        this.team = t;
+        this.manager = m;
         System.out.println( m.getName() );
     }
+    
+    Manager manager;
+    Team team;
     
     @Autowired @Qualifier("first") Manager m;
     
