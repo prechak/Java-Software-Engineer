@@ -10,7 +10,8 @@ class Start{
         ApplicationContext context;
         context = SpringApplication.run(Setup.class);
         
-        Manager current = context.getBean(Manager.class);
+        //Manager current = context.getBean(Manager.class);
+        Manager current = (Manager)context.getBean("first");
         System.out.println( current.getSalary() );
         
         SpringApplication.exit(context);
@@ -20,8 +21,8 @@ class Start{
 
 @SpringBootApplication
 class Setup{
-    @Bean 
-    Manager first(){
+    @Bean("first")
+    Manager createManager(){
         Manager m = new Manager();
         m.setName("Frank Lampard");
         m.setSalary(60000.0);
