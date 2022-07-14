@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class BranchController{
     
+    BranchController(Team t, @Qualifier("second")Manager m){
+        this.t = t;
+        this.m = m;
+        System.out.println( m.getName() );
+    }
+    
     @Autowired @Qualifier("first") Manager m;
     
     @Autowired Team t;
