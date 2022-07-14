@@ -10,9 +10,8 @@ class Start{
         ApplicationContext context;
         context = SpringApplication.run(Setup.class);
         
-        //Manager current = context.getBean(Manager.class);
-        Manager current = (Manager)context.getBean("second");
-        System.out.println( current.getSalary() );
+        Team t = context.getBean(Team.class);
+        System.out.println(t.getManager().getSalary() );
         
         SpringApplication.exit(context);
     }
@@ -21,6 +20,14 @@ class Start{
 
 @SpringBootApplication
 class Setup{
+    @Bean("primary")
+    Team createTeam(Manager m){ // in case have only one manager
+        Team t = new Team();
+        t.setName("Laliga - Barcelona");
+        t.setManager(m);
+        return t;   //if return t manager is null
+    }
+    
     @Bean("first")
     Manager createManager(){
         Manager m = new Manager();
@@ -35,6 +42,24 @@ class Setup{
         m.setSalary(55000.0);
         return m;
     }
+}
+
+class Team{
+    String isoName;
+    void setName(String name){
+        isoName = name;
+    }
+    Manager head;
+    String getName(){
+        return isoName;
+    }
+    void setManager(Manager m){     // Manual Injection
+        head = m;
+    }
+    Manager getManager(){
+        return head;
+    }
+    
 }
 
 class Manager{
