@@ -197,6 +197,9 @@ class Manager{
 Autowired to instance or field
 ------------------------------
 
+
+Constructor Injection
+---------------------
 package main;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -206,6 +209,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 class BranchController{
+    
+    BranchController(Team t, @Qualifier("second")Manager m){
+        this.team = t;
+        this.manager = m;
+        System.out.println( m.getName() );
+    }
+    
+    Manager manager;
+    Team team;
     
     @Autowired @Qualifier("first") Manager m;
     
@@ -225,6 +237,25 @@ class BranchController{
     
 }
 
+
 ============================
 	
+- Property Injection ---> setting at properties
+
+// http://127.0.0.1:8000/area?width=8.5&height=10.0
+
+	@RequestMapping("/area")
+	String showArea(String width, String height){
+	  try{
+		double w = Double.parseDouble(width);
+		double h = Double.valueOf(height);
+		return "" + w*h;
+		} catch (Exception e) {
+			return "Invalid Number";
+		}
+		return 0.0;
+	}
+
+	
+
 	

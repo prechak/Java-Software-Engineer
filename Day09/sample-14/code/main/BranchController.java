@@ -8,6 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class BranchController{
     
+    @RequestMapping("/area")
+	String showArea(String width, String height){
+	  try{
+		double w = Double.parseDouble(width);
+		double h = Double.valueOf(height);
+		return "" + w*h;
+		} catch (Exception e) {
+			return "Invalid Number";
+		}
+	}
     
     Manager manager;
     Team team;
