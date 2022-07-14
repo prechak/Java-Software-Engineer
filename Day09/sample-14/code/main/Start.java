@@ -14,7 +14,7 @@ class Start{
         Team t = context.getBean(Team.class);
         System.out.println(t.getManager().getSalary() );
         
-        SpringApplication.exit(context);
+        //SpringApplication.exit(context);
     }
     
 }
@@ -26,7 +26,7 @@ class Setup{
         Team t = new Team();
         t.setName("Laliga - Barcelona");
         t.setManager(m);
-        return t;   //if return t manager is null
+        return t;   
     }
     
     @Bean("first")
