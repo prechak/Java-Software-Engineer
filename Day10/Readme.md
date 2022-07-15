@@ -36,5 +36,15 @@ FILE pom.xml
 	
 </project>
 
+// Live Coding should know 12 command of Java
+// https://codestar.work/java-fundamental.pdf
+
+
+// Manhattan Distance
+	1. Euclidean Distance - Pythagoras
+
+
+	
+
 
 
