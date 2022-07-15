@@ -15,10 +15,18 @@ class Second{
         first.next.next.prize = 1800000;
         first.next.next.year = 2017;
         
+        Champ best = null;
+        
         for(Champ c = first; c != null; c = c.next){
             System.out.println( c.name + " " + c.prize );
+            if(best == null){
+                best = c;
+            }
+            if(best.prize < c.prize){
+                best = c;
+            }
         }
-              
+              System.out.println("The best is " + best.prize);
     }
     
 }
