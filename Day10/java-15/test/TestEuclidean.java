@@ -14,8 +14,8 @@ public class TestEuclidean{
             Robot r = new Robot();
             double actualResult = r.findEuclideanDistance
                                         ("NNNNNNNW");
-            double start  = 7.071067 - 0.000001;
-            double finish = 7.071067 + 0.000001;
+            double start  = 7.071067 - 0.000001; // -delta
+            double finish = 7.071067 + 0.000001; // +delta
             
             assert start <= actualResult && 
                    actualResult <= finish;
