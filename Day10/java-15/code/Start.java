@@ -7,8 +7,12 @@ class Start{
             System.out.println("Enter Path: ");
             String path = input.nextLine();
             Robot robot = new Robot();
-            int distance = robot.findManhattonDistance(path);
-            System.out.println(distance);
+            try {
+                int distance = robot.findManhattonDistance(path);
+                System.out.println(distance);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         }
 }
 
@@ -17,7 +21,7 @@ class Cashier{
 }
 
 class Robot{
-    int findManhattonDistance(String path){
+    int findManhattonDistance(String path) throws Exception{
         char[] a = path.toCharArray();
         int x = 0; int y = 0;
         for(int i = 0; i < a.length; i++){
@@ -25,7 +29,17 @@ class Robot{
             if(a[i] == 'S') y--;
             if(a[i] == 'E') x++;
             if(a[i] == 'W') x--;
-        } //how to handle error, K
+        } //how to handle error
+        
+        for(int i = 0; i < a.length; i++){
+            if (a[i] != 'N' &&
+                a[i] != 'S' &&
+                a[i] != 'E' &&   
+                a[i] != 'W' ) { 
+            throw new Exception("Invalid Command");
+            }
+        }
+        
         if(x < 0) x = -x;
         if(y < 0) y = -y;
         return x + y;
