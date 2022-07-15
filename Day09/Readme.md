@@ -253,7 +253,6 @@ class BranchController{
 		} catch (Exception e) {
 			return "Invalid Number";
 		}
-		return 0.0;
 	}
 
 	
