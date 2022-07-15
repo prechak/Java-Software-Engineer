@@ -41,10 +41,22 @@ FILE pom.xml
 
 
 // Manhattan Distance
-	1. Euclidean Distance - Pythagoras
+	1. Euclidean Distance - Pythagoras --> (sqrt (a^2+b^2))
+	2. Manhattan Distance is have square block 
+
+===========
+
+Test-Driven Development	(TDD)
+-->Writing Unit test before writing real code.
+	'--> test001(), test002()
+
+Behavior-Driver Development (BDD)
+-->Write test case by English 
 
 
-	
+Domain-Driven Development (DDD)
+	naming everything like in business.
 
+	class Member { } --> class Investor { }
 
 
