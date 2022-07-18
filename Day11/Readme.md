@@ -97,6 +97,28 @@ values between them.
 
 โดยทั่วไป ทำไม่ได้ ต้องมี มือที่สาม มาช่วยด้วย
 
+Primitive Data					Class
+byte							Byte
+short							Short
+int								Int
+long							Long
+float							Float
+double							Double
+char							Character
+boolean							Boolean
+
+Coverting from primitive to instance:
+
+int k = 5;
+Integer u = k	// Boxing or Autoboxing ห่อของขวัญ
+
+Converting from instance to primitive:
+
+int m = u;		// Unboxing แกะกล่องของขวัญ
+
+
+int w = Integer.parseInt("123")	// แปลง "123" ให้เป็น Promitive
+int z = Interger.valueOf("123")	// แปลง "123" ให้เป็น Instance ก่อนแล้วค่อย Unbox
 
 
 
