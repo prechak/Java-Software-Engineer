@@ -88,7 +88,8 @@ class Start{
 And Starting and ending position,
 write code to reverse from starting to finishing position.
 
-https://codestar.work/two-pointer.pdf
+https://codestar.work/two-pointers.pdf
+https://codestar.work/java-04.pdf
 
 
 Given two variable, how can you interchange the
