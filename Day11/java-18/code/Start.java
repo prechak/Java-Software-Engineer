@@ -1,21 +1,27 @@
 
 class Start{
     public static void main(String[] z){
-        int[] a = { 8, 6, 5, 3, 7, 5, 4, 1 };
-        int start = 2;
-        int finish = 6;
-        int left = start;
-        int right = finish;
-        while(left < right){
-            int y = a[left];
-            int x = a[right];
-            a[right] = y;
-            a[left] = x;
-            left++;
-            right--;
-        }
-        for(int i = 0; i < a.length; i++){
-            System.out.print(a[i] + " ");
-        }
+        
+        int w = Integer.parseInt("123");
+        int y = Integer.valueOf("123");
+        
+        
     }
+}
+
+class Tool {
+    Element create(int[] a){    // Accept Array
+        return null;
+    }
+    Element build(int ... a){   // Variadic Method
+        return null;
+    }
+}
+
+class Element {
+    String name;    // default value null
+    int number;     // default 0
+    Element next;   // null
+    
+    
 }
