@@ -120,5 +120,37 @@ int m = u;		// Unboxing แกะกล่องของขวัญ
 int w = Integer.parseInt("123")	// แปลง "123" ให้เป็น Promitive
 int z = Interger.valueOf("123")	// แปลง "123" ให้เป็น Instance ก่อนแล้วค่อย Unbox
 
+============
 
+write a method to reverse the given linked list.
+
+Write a method find the middle point of the given linked list.
+
+Given two sorted linked list, write a method to merge them.
+
+
+
+==========
+
+Tonight's Missoion:
+codestar.work/mission-java.pdf
+
+==========
+
+Merge Sort
+https://codestar.work/merge-sort.pdf
+
+ได้ข้อมูลมาแบ่งครึ่งไปเรื่อยๆ
+
+	8	5	6	3 	4	1	9	7
+	
+	8	5	6	3|	4	1	9	7
+
+	8	5|	6	3|	4	1	9	7
+
+	8|	5|	6|	3|	4|	1|	9|	7		// Sorted block of 8 blocks
+
+
+	5	8|	3	6|	1	4|	7	9
+	3	5	6	8|	1	4	7	9
 
