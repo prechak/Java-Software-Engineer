@@ -1,7 +1,7 @@
 
 Day12:
 
-Merge Sort
+Merge Sort ~ Use Buffer
 https://codestar.work/java-05.pdf
 
 Imperative 
@@ -78,6 +78,24 @@ class Engine {
 
 Write code to print binary string length N
 N=3		000 001 010 011 100 101 110 111
+
+Gauss ~ Fourier Transform
+=====
+An + An-1 + An-2 + ... + A0
+Bn + Bn-1 + Bn-2 + ... + B0
+
+John von Neumann
+================
+Top Secret ~ Merge Sort (Sort by Merging)
+
+A0 A1 A2 ... An
+
+Tony Hoare ~ Quick Sort
+==========
+ใช้หลักการเดียวกับ Gauss แต่กลับด้าน
+
+Divine & Conquer ~ 1972
+
 
 
 
