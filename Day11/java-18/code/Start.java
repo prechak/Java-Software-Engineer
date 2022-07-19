@@ -21,7 +21,13 @@ class Start {
             System.out.printf("%.2f", total);
             System.out.println();
         }
-        
+        for(int c = 0; c < t[0].length; c++){
+            double total = 0.0;
+            for(int r = 0; r < t.length; r++){
+                total += t[r][c];
+            }
+            System.out.printf("Column %d %.2f\n", c, total);
+        }
     }
 }
 
