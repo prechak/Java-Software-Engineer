@@ -4,19 +4,31 @@ class Start{
         int[] a = { 6, 8, 3, 5, 1, 9 };
         Node root = null;
         Helper h = new Helper();
-        root = h.insert(a[0], root);
-        System.out.println(root.value);
+        
+        for(int i = 0; i < a.length; i++){
+          root = h.insert(a[i], root);  
+        }
+        //System.out.println(root.value);
+        h.print(root);
     }
 }
 
 class Helper {
+    void print(Node c){
+        if(c == null) return;
+        print(c.left);
+        System.out.println(c.value);
+        print(c.right);
+    }
     Node insert(int key, Node c){
         if(c == null){
             c = new Node();
             c.value = key;
             return c;
         }
-        return null;
+        if(key < c.value) c.left = insert(key, c.left);
+        if(key > c.value) c.right = insert(key, c.right);
+        return c;
     }
 }
 
