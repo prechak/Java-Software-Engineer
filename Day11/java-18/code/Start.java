@@ -4,12 +4,17 @@
 class Start {
     public static void main(String[] data){
         double [][] m = new double [3][4];
-        m[0][1] = 8.5;
-        m[1][1] = 8.7;
-        m[2][1] = 8.9;
-        for(int r = 0; r < m.length; r++){
-            System.out.println(m[r][1]);
+        double [][] t =  { 
+            
+                                {8.3, 8.5, 8.0, 8.4},
+                                {8.1, 8.7, 9.0, 8.5},
+                                {8.4, 8.9, 9.1, 8.7}
+                            
+                        };
+        for(int r = 0; r < t.length; r++){
+            System.out.println( t[r][0]);
         }
+        
     }
 }
 
