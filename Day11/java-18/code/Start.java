@@ -6,10 +6,20 @@ class Start{
         Node root = h.build(a);
         //h.display(root);
         h.show(root, "");
+        h.go(root, 0);
            
     }
 }
 class Helper{
+    void go(Node c, int s) {
+        if(c == null) return;
+        if(c.left == null && c.right == null){
+            System.out.println( s * 10 + c.number);
+            return;
+        }
+        go(c.left, s * 10 + c.number);      //เคิมหลักเข้าไปโดยการ * 10
+        go(c.right, s * 10 + c.number);
+    }
     void show(Node c, String s){
         if(c == null) return;
         if(c.left == null && c.right == null){

@@ -247,6 +247,9 @@ class Engine {
     }
 }
 
+=====================
 
+Binary Tree			--> Expresstion Tree --> ไม่่ค่อยมีประโยชน์เท่าไหร่
+Binary Search Tree 	-->
 
 
