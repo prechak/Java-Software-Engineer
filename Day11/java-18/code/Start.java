@@ -4,11 +4,16 @@ class Start{
         int[] a = { 3, 6, 8, 4, 2, 1, 9 };
         Helper h = new Helper();
         Node root = h.build(a);
-        h.display(root);
+        //h.display(root);
+        System.out.println( h.sum(root));
            
     }
 }
 class Helper{
+    int sum(Node c){
+        if(c == null) return 0;
+        return c.number + sum(c.left) + sum(c.right);
+    }
     void display(Node c){
         if(c == null) return;
         System.out.println(c.number);
