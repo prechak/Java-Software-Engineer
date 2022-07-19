@@ -3,12 +3,15 @@
 	<groupId> app.artfully </groupId>
 	<artifactId> java-18 </artifactId>
 	<version> 0.5 </version>
+        
 	<build>
 		<sourceDirectory> code </sourceDirectory>
 		<testSourceDirectory> test </testSourceDirectory>
 	</build>
-	<properties> 
-            <maven.compiler.source>18</maven.compiler.source>
-            <naven.compiler.target>18</naven.compiler.target>
+
+	<properties>
+		<maven.compiler.source> 18 </maven.compiler.source>
+		<maven.compiler.target> 18 </maven.compiler.target>
 	</properties>
+	
 </project>

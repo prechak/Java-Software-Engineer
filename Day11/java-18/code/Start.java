@@ -1,46 +1,23 @@
 
 class Start{
-    public static void main(String[] z){
-        Tool t = new Tool();
-        Element first = t.build( 8, 5, 4, 2, 1, 9, 4, 7);
-        Element second = t.cut(first);
-        
-        for(Element e = first; e != null; e = e.next)
-            System.out.println();
-        System.out.println();
-        for(Element e = secondl e != null; e = e.next)
-            System.out.println(e.number + " ");
+    public static void main(String[] data){
+        Engine e = new Engine();
+        e.create("");
     }
 }
 
-class Tool {
-    Element create(int[] a){    // Accept Array
-        Element head = null;
-        Element last = null;
-        for(int i = a.length - 1; i >= 0; i--){
-            last = new Element();
-            last.number = a[i];
-            if(last == null) {last = e; }
+class Engine {
+    void create(String s){
+        if(s.length() == 3){
+            System.out.println(s);
+            return;
         }
+        create(s + "0");
+        create(s + "1");
     }
-    Element build(int ... a){   // Variadic Method
-        Element first = null;
-        Element last  = null;
-        for(int i = 0; i < a.length; i++){
-            Element e = new Element();
-            e.number = a[i];
-            if(head == null){
-                first
-                
-            }
-        }
+    void show(int N){
+        if(N==0) return;
+        show(N-1);
+        System.out.println(N);
     }
-}
-
-class Element {
-    String name;    // default value null
-    int number;     // default 0
-    Element next;   // null
-    
-    
 }
