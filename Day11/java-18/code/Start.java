@@ -1,30 +1,36 @@
 
 class Start{
     public static void main(String[] data){
-        Node root;
-        root = new Node();
-        root.name = "David";
-        root.number = 7;
-        
-        root.right = new Node();
-        root.right.name = "Micheal";
-        root.right.number = 10;
-        
-        root.right.right = new Node();
-        root.right.right.name = "Stephen";
-        root.right.right.number = 4;
-        
-        Node x = new Node();
-        x.name = "Frank";
-        x.number = 8;
-        
-        root.left = x;
+        int[] a = { 3, 6, 8, 4, 2, 1, 9 };
         Helper h = new Helper();
-        h.print(root);
+        Node root = h.build(a);
+        h.display(root);
            
     }
 }
 class Helper{
+    void display(Node c){
+        if(c == null) return;
+        System.out.println(c.number);
+        display(c.left); display(c.right);
+    }
+    Node build(int[] a){
+        int mid = a.length / 2;
+        Node c = new Node();
+        c.number = a[mid];
+        c.left = build(a, 0, mid -1);
+        c.right = build(a, mid+1, a.length -1);
+        return c;
+    }
+    Node build(int[] a, int left, int right){
+        if(left > right) return null;
+        int mid = (left+right) /2;
+        Node c = new Node();
+        c.number = a[mid];
+        c.left = build(a, left, mid -1);
+        c.right = build(a, mid+1, right);
+        return c;
+    }
     void print(Node c){
         if( c == null) return; // Base Case
         System.out.println(c.name);
