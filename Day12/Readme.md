@@ -356,5 +356,17 @@ class Engine {
 ================================
 
 
+Storing one value to a variable, you don't need any structure.
+
+Stroring multiple values, you need a structure.
+
+1. Array
+2. Linked List
+3. Binary Tree ~ Expresstion Tree (2+3)-(2*1)
+4. Binary Search Tree  (B-Tree ~ running on harddisk)
+5. Matrix (Table[][])
+
+
+
 
 

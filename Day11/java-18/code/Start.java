@@ -1,5 +1,40 @@
 
-class Start{
+// Matrix
+
+class Start {
+    public static void main(String[] data){
+        double [][] m = new double [3][4];
+        m[0][1] = 8.5;
+        m[1][1] = 8.7;
+        m[2][1] = 8.9;
+        for(int r = 0; r < m.length; r++){
+            System.out.println(m[r][1]);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Binary Search Tree
+class Start1{
     public static void main(String[] data){
         int[] a = { 6, 8, 3, 5, 1, 9, 5, 6, 5, 6 };
         Node root = null;
