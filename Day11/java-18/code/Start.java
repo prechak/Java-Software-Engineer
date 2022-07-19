@@ -5,15 +5,18 @@ class Start{
         e.create("");
     }
 }
-
+// In volley ball, there are three result: W, D, L
+// write code to print all possible results
+// from 4 mathes.
 class Engine {
     void create(String s){
         if(s.length() == 3){
             System.out.println(s);
             return;
         }
-        create(s + "0");
-        create(s + "1");
+        create(s + "W");
+        create(s + "D");
+        create(s + "L");
     }
     void show(int N){
         if(N==0) return;
