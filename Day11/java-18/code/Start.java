@@ -12,16 +12,21 @@ class Start {
                             
                         };
         for(int r = 0; r < t.length; r++){
+            double total = 0.0;
             for(int c = 0; c < 4; c++){
                 System.out.print(t[r][c]+" ");
+                //total = total + t[r][c];
+                total += t[r][c];
             }
+            System.out.printf("%.2f", total);
             System.out.println();
         }
         
     }
 }
 
-
+// Install Tomcat in local laptop is harder
+// than in Ubuntu. https://codestar.work/java-web.pdf
 
 
 
