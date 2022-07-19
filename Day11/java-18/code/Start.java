@@ -1,7 +1,7 @@
 
 class Start{
     public static void main(String[] data){
-        int[] a = { 6, 8, 3, 5, 1, 9 };
+        int[] a = { 6, 8, 3, 5, 1, 9, 5, 6, 5, 6 };
         Node root = null;
         Helper h = new Helper();
         
@@ -27,7 +27,7 @@ class Helper {
             return c;
         }
         if(key < c.value) c.left = insert(key, c.left);
-        if(key > c.value) c.right = insert(key, c.right);
+        if(key >= c.value) c.right = insert(key, c.right); // ใส่ = เข้าไปจะเก็บตัวซ้ำ
         return c;
     }
 }
