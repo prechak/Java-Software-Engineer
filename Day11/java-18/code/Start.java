@@ -5,11 +5,20 @@ class Start{
         Helper h = new Helper();
         Node root = h.build(a);
         //h.display(root);
-        System.out.println( h.sum(root));
+        h.show(root, "");
            
     }
 }
 class Helper{
+    void show(Node c, String s){
+        if(c == null) return;
+        if(c.left == null && c.right == null){
+            System.out.println(s + c.number);
+            return;
+        }
+        show(c.left,  s + c.number);
+        show(c.right, s + c.number);
+    }
     int sum(Node c){
         if(c == null) return 0;
         return c.number + sum(c.left) + sum(c.right);
