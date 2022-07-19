@@ -12,7 +12,10 @@ class Start {
                             
                         };
         for(int r = 0; r < t.length; r++){
-            System.out.println( t[r][0]);
+            for(int c = 0; c < 4; c++){
+                System.out.print(t[r][c]+" ");
+            }
+            System.out.println();
         }
         
     }
