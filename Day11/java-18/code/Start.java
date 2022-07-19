@@ -2,13 +2,23 @@
 class Start{
     public static void main(String[] data){
         Engine e = new Engine();
-        e.create("");
+        //e.create("");
+        e.play("");
     }
 }
-// In volley ball, there are three result: W, D, L
+// In football, there are three result: W, D, L
 // write code to print all possible results
 // from 4 mathes.
 class Engine {
+    void play(String s){
+        if(s.length() == 4){
+            System.out.println(s);
+            return;
+        }
+        play(s + "W");
+        play(s + "D");
+        play(s + "L");
+    }
     void create(String s){
         if(s.length() == 3){
             System.out.println(s);

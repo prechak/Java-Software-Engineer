@@ -65,6 +65,9 @@ class Engine {
         }
         create(s + "0");
         create(s + "1");
+		//create(s + "W");
+		//create(s + "D");
+		//create(s + "L");
     }
     void show(int N){
         if(N==0) return;
@@ -75,4 +78,6 @@ class Engine {
 
 Write code to print binary string length N
 N=3		000 001 010 011 100 101 110 111
+
+
 
