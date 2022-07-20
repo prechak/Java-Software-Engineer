@@ -73,5 +73,33 @@ Java Annotation: @Deprecated, @Override
 The keyword "new":			use for createing an instance
 The keyword "instanceof":	use for checking an instance with class
 
+===============================
 
+class Start{
+    public static void main(String[] data){
+        Vehicle[] all = { new Car(), new Truck(),
+                          new Truck(), new Car(),
+                          new Car(), new Car() };
+    // Write code to count number of instance of Car
+        int count = 0;
+        for(int i = 0; i < all.length; i++){
+            if(all[i] instanceof Car) {
+                System.out.println("OK");
+                count++;
+            }
+        }
+        System.out.println("Count is" + count);
+        for(Vehicle v : all){
+            if(v instanceof Car){
+                System.out.println("Yes");
+            }
+        }
+    }
+}
+
+class Vehicle{ }
+class Car extends Vehicle { }
+class Truck extends Vehicle { }
+
+==========================================
 
