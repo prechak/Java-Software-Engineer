@@ -207,6 +207,75 @@ class Worker implements Runnable{
 
 ======================
 
+Sorting in Java: Comparable, Comparator
+
+interface Comparable {
+	int compareto(Object x);
+}
+
+interface Comparator {
+	int compare(Object x, Object y);
+}
+
+Tricotomy: 
+Let u and v are real number. The following situation will be exclusively true.
+1. u < v			return -1
+2. u > v			return +1
+3. u = v			return 0
+
+Three-Way Comparison
+
+ import java.util.*;
+
+class Start{
+    public static void main(String[] data){
+        Team[] list = { new Team("Bangkok", 3, 5, 4),
+                        new Team("Pattaya", 2, 7, 3),
+                        new Team("Chiang Mai", 4, 3, 1)
+                       };
+        Arrays.sort(list, new SportComparator());
+        for (Team t : list) System.out.println(t);
+        
+    }
+}
+
+class SportComparator implements Comparator{
+    @Override
+    public int compare(Object x, Object y){
+        Team u = (Team)x;
+        Team v = (Team)y;
+        if(u.gold > v.gold) return -1;
+        if(u.gold < v.gold) return +1;
+        if(u.silver > v.silver) return -1;
+        if(u.silver < v.silver) return +1;
+        if(u.bronze > v.bronze) return -1;
+        if(u.silver < v.silver) return +1;
+        return 0;
+    }
+}
+
+class Team {
+    Team(String name, int gold, int silver, int bronze){
+        this.name = name;
+        this.gold = gold;
+        this.silver = silver;
+        this.bronze = bronze;
+    }
+    String name;
+    int gold, silver, bronze;
+    
+    @Override
+    public String toString(){
+        return name;
+    }
+}
+
+==================================
+
+Comparing in CPU instruction, CMP = CISC - RISC (MINUS)
+
+Complex Instruction Set Computer : CISC - contains many instruction
+Reduce Instruction Set Computer  : RISC - contain only few instructions
 
 
- 
+
