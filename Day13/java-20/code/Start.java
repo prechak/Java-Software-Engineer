@@ -1,14 +1,30 @@
+import java.util.Arrays;
+
 class Start{
     public static void main(String[] data){
-        Printer p = new Printer();
-        p.start();  //start() will initialize CPU
-                    // and call run() for you
-        Worker w = new Worker();
-        Thread t = new Thread(w);
-        t.start();
-        for(int i = 0; i < 1000; i++){
-            System.out.print('A');
-        }
+        Team[] list = { new Team("Bangkok", 3, 5, 4),
+                        new Team("Pattaya", 2, 7, 3),
+                        new Team("Chiang Mai", 4, 3, 1)
+                       };
+        //Arrays.sort(list);
+        for (Team t : list) System.out.println(t);
+        
+    }
+}
+
+class Team {
+    Team(String name, int gold, int silver, int bronze){
+        this.name = name;
+        this.gold = gold;
+        this.silver = silver;
+        this.bronze = bronze;
+    }
+    String name;
+    int gold, silver, bronze;
+    
+    @Override
+    public String toString(){
+        return name;
     }
 }
 
