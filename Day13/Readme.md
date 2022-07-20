@@ -233,7 +233,8 @@ class Start{
                         new Team("Pattaya", 2, 7, 3),
                         new Team("Chiang Mai", 4, 3, 1)
                        };
-        Arrays.sort(list, new SportComparator());
+		Arrays.sort(list, (p,q) -> p.gold - q.gold);
+        //Arrays.sort(list, new SportComparator());
         for (Team t : list) System.out.println(t);
         
     }
@@ -242,7 +243,7 @@ class Start{
 class SportComparator implements Comparator{
     @Override
     public int compare(Object x, Object y){
-        Team u = (Team)x;
+        /* Team u = (Team)x;
         Team v = (Team)y;
         if(u.gold > v.gold) return -1;
         if(u.gold < v.gold) return +1;
@@ -250,7 +251,8 @@ class SportComparator implements Comparator{
         if(u.silver < v.silver) return +1;
         if(u.bronze > v.bronze) return -1;
         if(u.silver < v.silver) return +1;
-        return 0;
+        return 0; */
+		return u.gold - v.gold;
     }
 }
 
