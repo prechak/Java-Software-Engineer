@@ -158,7 +158,7 @@ Multiple threading application
 in Java has 2 way
 
 -> class Printer extends Thread { }
--> class Writer implements Runnable { }
+-> class Worker implements Runnable { }
 
 Create thread in Java
 =====================
@@ -181,7 +181,24 @@ class Printer extends Thread {
         }
     }
 }
-====================
+====================//Update
+
+class Start{
+    public static void main(String[] data){
+        Printer p = new Printer();
+        p.start();  //start() will initialize CPU
+                    // and call run() for you
+        Worker w = new Worker();
+        Thread t = new Thread(w);
+        t.start();
+        for(int i = 0; i < 1000; i++){
+            System.out.print('A');
+        }
+    }
+}
+
+======================
+
 
 
  
