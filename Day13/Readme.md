@@ -123,3 +123,43 @@ in Java,
 class User { }
 			'----> extends Object
 
+===========================================
+
+Multiple Superclasses : C++, Python
+
+class User { }
+class Yearly { }
+
+class Premium extends User, Yearly { }
+
+
+Single Superclasses: Java, C#, Swift, JavaScript
+class A { }
+class B { }
+class C extends A { }		// OK
+class D extends A, B { }	// Error
+
+
+Interface
+interface I { }
+interface J { }
+interface K extends I, J { } // OK
+
+Java  - Interface
+C# 	  - Interface
+Swift - Protocol
+
+
+In Java, interface usually ending with -able, -ible
+e.g 
+Runnable - it can run independently
+
+Multiple threading application
+in Java has 2 way
+
+-> class Printer extends Thread { }
+-> class Writer implements Runnable { }
+
+
+
+ 

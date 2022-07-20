@@ -18,6 +18,7 @@ class Start{
             }
         }
         Truck t = new Truck();
+        //var t = new Truck();
         System.out.println( t instanceof Truck ); //true
         System.out.println( t instanceof Vehicle); //true
         System.out.println( t instanceof Object);   //true
