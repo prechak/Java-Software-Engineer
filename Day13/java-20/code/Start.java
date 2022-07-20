@@ -2,6 +2,11 @@ import java.util.*;
 
 class Start{
     public static void main(String[] data){
+        String[] all = { "Love", "Hate", "AAA" };
+        Arrays.sort(all); 
+        for(String s : all) System.out.println(s);
+        
+        
         Team[] list = { new Team("Bangkok", 1, 5, 4),
                         new Team("Pattaya", 2, 7, 3),
                         new Team("Chiang Mai", 4, 3, 1)

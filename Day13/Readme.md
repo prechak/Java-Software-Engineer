@@ -279,5 +279,21 @@ Comparing in CPU instruction, CMP = CISC - RISC (MINUS)
 Complex Instruction Set Computer : CISC - contains many instruction
 Reduce Instruction Set Computer  : RISC - contain only few instructions
 
+==================================
 
+Enumerable Data
 
+class Student {
+	String name;
+	Gender gender;
+}
+enum Gender { MALE, FEMALE }
+
+'-- Object
+	'-- Enum	<-- Super Class of Enum
+		'-- Gen
+
+==================================
+
+Record in Java is a class, but written in shorter form.
+//เหมือนคลาสทุกประการแต่เขียนสั้นๆ
