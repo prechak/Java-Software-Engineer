@@ -17,10 +17,15 @@ class Start{
                 System.out.println("Yes");
             }
         }
+        Truck t = new Truck();
+        System.out.println( t instanceof Truck ); //true
+        System.out.println( t instanceof Vehicle); //true
+        System.out.println( t instanceof Object);   //true
+        
     }
 }
 
-class Vehicle{ }
+class Vehicle{ } // superclass of Vehicle is ---> extends Object
 class Car extends Vehicle { }
 class Truck extends Vehicle { }
 

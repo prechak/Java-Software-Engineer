@@ -94,6 +94,11 @@ class Start{
                 System.out.println("Yes");
             }
         }
+
+        Truck t = new Truck();
+        System.out.println( t instanceof Truck ); //true
+        System.out.println( t instanceof Vehicle); //true
+        System.out.println( t instanceof Object);   //true
     }
 }
 
@@ -102,4 +107,19 @@ class Car extends Vehicle { }
 class Truck extends Vehicle { }
 
 ==========================================
+
+In some language, e.g. VB.net
+
+class Car inherits Vehicle { }
+
+
+
+Computer Languages:
+'-- Root Class: Java, C#, JavaScript
+'-- No Root Class: C++, Swift
+
+in Java,
+
+class User { }
+			'----> extends Object
 
