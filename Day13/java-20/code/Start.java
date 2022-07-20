@@ -2,21 +2,23 @@ import java.util.*;
 
 class Start{
     public static void main(String[] data){
-        String[] all = { "Love", "Hate", "AAA" };
-        Arrays.sort(all); 
-        for(String s : all) System.out.println(s);
-        
-        
         Team[] list = { new Team("Bangkok", 1, 5, 4),
                         new Team("Pattaya", 2, 7, 3),
                         new Team("Chiang Mai", 4, 3, 1)
                        };
-        //Arrays.sort(list, new SportComparator());
-        Arrays.sort(list, (p,q) -> p.gold - q.gold);
-        for (Team t : list) System.out.println(t);
+        Competitor[] all = {   new Competitor("A", 3,5,4),
+                                new Competitor("B", 4,6,8)
+                            };
+        Arrays.sort(all, (u,v) -> v.gold() - u.gold());
+        
+        for(Competitor c : all) System.out.println(c);
+        
+        
         
     }
 }
+
+record Competitor(String name, int gold, int silver, int bronze){}
 
 class SportComparator implements Comparator{
     @Override
