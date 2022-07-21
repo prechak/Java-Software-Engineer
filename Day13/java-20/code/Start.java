@@ -1,17 +1,17 @@
 import java.util.Set;
-import java.util.TreeSet;
-import java.util.HashSet;
+import java.util.TreeMap;
+import java.util.HashMap;
 
 class Start{
     public static void main(String[] data){
-        HashSet<String> set = new HashSet<>();
+        TreeMap<String, Integer> storage = new TreeMap<>();
+        storage.put("Bang Rak", 10500);
+        storage.put("Bang Plad", 10700);
+        storage.put("Patumwan", 10330);
         
-        set.add("Latte");
-        set.add("Mocha");
-        set.add("Latte");
-        set.add("Espresso");
+        storage.put("Bang Rak", 10501);     // มาทีหลังเลือกอันหลัง
         
-        System.out.println( set );
-
+        Integer w = storage.get("Bang Rak");
+        System.out.println(w);
     }
 }
