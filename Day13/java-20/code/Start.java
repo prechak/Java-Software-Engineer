@@ -1,20 +1,15 @@
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 class Start{
     public static void main(String[] data){
-        
-//        int c = "Latte".compareTo("Mocha");
-//        System.out.println(c);
-        
-        Player[] list = { new Player("David", 7),
-                          new Player("Micheal", 10),
-                          new Player("Frank", 8),
-                          new Player("John", 2)
-                        };
-        Arrays.sort(list);
-        for(Player p : list){
-            System.out.println(p.name);
-        }
+        ArrayList a = new ArrayList();
+        a.add("Latte");
+        a.add(5);   // convert to instance of Integer
+        a.add(7.5); // convert to instance of Double
+        a.add("Mocha");
+        System.out.println(a);
     }
 }
 

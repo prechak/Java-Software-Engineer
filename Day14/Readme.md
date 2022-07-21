@@ -53,6 +53,49 @@ You must know the size of data before allocating spcace.
 In practical, it is very to know the size.
 
 ====================
+import java.util.*;
+
+class Start{
+    public static void main(String[] data){
+        
+//        int c = "Latte".compareTo("Mocha");
+//        System.out.println(c);
+        
+        Player[] list = { new Player("David", 7),
+                          new Player("Micheal", 10),
+                          new Player("Frank", 8),
+                          new Player("John", 2)
+                        };
+        Arrays.sort(list);
+        for(Player p : list){
+            System.out.println(p.name);
+        }
+    }
+}
+
+class Player implements Comparable{
+    String name;
+    int number;
+    
+    Player(String name, int number){
+        this.name = name;
+        this.number = number;
+    }
+    
+    @Override
+    public int compareTo(Object o){
+        Player p = (Player)o;
+//        if (this.number < p.number) return -1;
+//        if (this.number > p.number) return +1;
+//        return 0;
+          return this.name.compareTo(p.name);
+    }
+}
+
+
+=======================
+
+
 
 List - A data structure that keep data without knowing the size
 '-- LinkedList	คือ List ที่สร้างจากการเชื่อมโยง Instance
