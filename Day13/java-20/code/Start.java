@@ -3,12 +3,13 @@ import java.util.*;
 class Start{
     public static void main(String[] data){
         
-        int c = "Latte".compareTo("Mocha");
-        System.out.println(c);
+//        int c = "Latte".compareTo("Mocha");
+//        System.out.println(c);
         
         Player[] list = { new Player("David", 7),
                           new Player("Micheal", 10),
-                          new Player("Frank", 8)
+                          new Player("Frank", 8),
+                          new Player("John", 2)
                         };
         Arrays.sort(list);
         for(Player p : list){
@@ -29,9 +30,10 @@ class Player implements Comparable{
     @Override
     public int compareTo(Object o){
         Player p = (Player)o;
-        if (this.number < p.number) return -1;
-        if (this.number > p.number) return +1;
-        return 0;
+//        if (this.number < p.number) return -1;
+//        if (this.number > p.number) return +1;
+//        return 0;
+          return this.name.compareTo(p.name);
     }
 }
 
