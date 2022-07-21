@@ -148,3 +148,12 @@ How to use ArrayList
         ArrayList<String> b = new ArrayList<>();
         List<String> c = new ArrayList<>();
         var d = new ArrayList<String>();
+
+
+CSV
+Comma-Separated Value
+
+Lemonade,Cola,Coffee
+Fried Rice, Kaprao Rice
+Bua Loy, Lod Chong, Stick Rice Mango
+
