@@ -9,13 +9,25 @@ class Start{
                                 {"Fried Rice", "Kaprao Rice"},
                                 {"Bua Loy", "Lod Chong", "Sticky Rice Mango" }
                           };
-        for(int d = 0; d < all[0].length; d++){
-            for(int r = 0; r < all[1].length; r++) {
-                for (int s = 0; s < all[2].length; s++) {
-                    System.out.println(d + " " + r + " " + s);
-                }
-            }
+        
+        Tool t = new Tool();
+        t.list(0, "", all);
+    }
+}
+
+class Tool{
+    void list(int layer, String result, String[][] all){
+        if(layer == all.length){
+            System.out.println(result);
+            return;
         }
+        for(int i = 0; i < all[layer].length; i++){
+            //result += all[layer][i] + "/";
+            list(layer+1, result + all[layer][i]+"/", all);
+        }
+    }
+}
+
         
 //        TreeMap<String, Integer> storage = new TreeMap<>();
 //        storage.put("Bang Rak", 10500);
