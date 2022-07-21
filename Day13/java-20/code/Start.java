@@ -12,7 +12,9 @@ class Start{
         System.out.println(a);
         
         for(Object o : a){
+            if( o instanceof String){
             System.out.println(o);
+            }
         }
         // Write code to print only instanceof String
     }
