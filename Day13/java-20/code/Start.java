@@ -11,7 +11,11 @@ class Start{
         
         storage.put("Bang Rak", 10501);     // มาทีหลังเลือกอันหลัง
         
-        Integer w = storage.get("Bang Rak");
-        System.out.println(w);
+//        Integer w = storage.get("Bang Rak");
+//        System.out.println(w);
+
+          for(String s : storage.keySet()) {
+              System.out.println(s);
+          }
     }
 }
