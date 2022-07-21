@@ -13,15 +13,13 @@ class Start{
         a.add("Latte");
         
         //a.remove("Latte"); //remove first Latte
-        a.remove(3);         //remove from index
+        //a.remove(3);         //remove from index
+        Object o = a.get(0);
         System.out.println(a);
         
-        for(Object o : a){
-            if( o instanceof String){
-            System.out.println(o);
-            }
-        }
-        // Write code to print only instanceof String
+        int size = a.size();
+        System.out.println(size);
+
     }
 }
 
