@@ -2,6 +2,42 @@ import java.util.*;
 
 class Start{
     public static void main(String[] data){
+        
+        Player[] list = { new Player("David", 7),
+                          new Player("Micheal", 10),
+                          new Player("Frank", 8)
+                        };
+        Arrays.sort(list);
+        for(Player p : list){
+            System.out.println(p.name);
+        }
+    }
+}
+
+class Player implements Comparable{
+    String name;
+    int number;
+    
+    Player(String name, int number){
+        this.name = name;
+        this.number = number;
+    }
+    
+    @Override
+    public int compareTo(Object o){
+        return 0;
+    }
+}
+
+
+
+
+
+
+/*import java.util.*;
+
+class Start{
+    public static void main(String[] data){
         Team[] list = { new Team("Bangkok", 1, 5, 4),
                         new Team("Pattaya", 2, 7, 3),
                         new Team("Chiang Mai", 4, 3, 1)
@@ -61,4 +97,4 @@ class Printer extends Thread {
             System.out.print('P');
         }
     }
-}
+}*/
