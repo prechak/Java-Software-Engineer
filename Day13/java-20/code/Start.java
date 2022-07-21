@@ -2,10 +2,31 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.io.File;
+import java.util.Scanner;
 
 class Start{
     public static void main(String[] data){
-        String[][] all = { 
+        try{
+            File f = new File("data.txt");
+            Scanner in = new Scanner(f);
+            while(in.hasNextLine()){
+                String s = in.nextLine();
+                String[] a = s.split(",");
+                raw.add(a);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        int count = 0;
+        String all = new String[raw.size()][];
+        for(Object o : raw){
+            String[] a = (String[])o;
+            all[count] = a;
+            count++;
+        }
+        
+        String[][] a = { 
                                 {"L", "C", "W"},
                                 {"FR", "KR"},
                                 {"BL", "LC", "SRM" }
