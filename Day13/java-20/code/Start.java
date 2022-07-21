@@ -5,9 +5,9 @@ import java.util.HashMap;
 class Start{
     public static void main(String[] data){
         String[][] all = { 
-                                {"Lemonade", "Cola", "Water"},
-                                {"Fried Rice", "Kaprao Rice"},
-                                {"Bua Loy", "Lod Chong", "Sticky Rice Mango" }
+                                {"L", "C", "W"},
+                                {"FR", "KR"},
+                                {"BL", "LC", "SRM" }
                           };
         
         Tool t = new Tool();
@@ -23,6 +23,8 @@ class Tool{
         }
         for(int i = 0; i < all[layer].length; i++){
             //result += all[layer][i] + "/";
+            var sep = "/";
+            if(layer == all.length-1) sep = "";
             list(layer+1, result + all[layer][i]+"/", all);
         }
     }
