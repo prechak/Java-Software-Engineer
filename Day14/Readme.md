@@ -103,6 +103,7 @@ List - A data structure that keep data without knowing the size
 
 interface List { 
 	boolean add(Object x);
+	int size;
 	boolean remove(int index);
 	boolean remove(Object x);
 	Object get(int index);
@@ -131,3 +132,14 @@ A = B
 C = { 5, 8, 2, 9 }
 
 A = C
+
+========================
+
+How to use ArrayList
+--------------------
+
+		//ArrayList a = new ArrayList();
+        ArrayList<String> a = new ArrayList<String>();
+        ArrayList<String> b = new ArrayList<>();
+        List<String> c = new ArrayList<>();
+        var d = new ArrayList<String>();
