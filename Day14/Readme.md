@@ -116,6 +116,11 @@ class ArrayList implements List { }
 Set - A data structure that keep only unique data (ไม่เก็บตัวซ้ำ) equals(), compareto()
 '-- TreeSet คือ Set ที่สร้างจาก Binary Search Tree มี 20 แบบ, (Red Black Tree)
 	TreeSet เป็น Red Black Tree ซึ่งเป็น Binary Search Tree แบบหนึ่ง
+	TreeSet จะดูตาม compareto()
+
+'-- HashSet คือ Set ที่สร้างจาก Hash Table
+	"Latte".hashCode()
+	"Latte".equals("Latte") ===> true
 
 Map - A data structure that keep value in pair
 '--

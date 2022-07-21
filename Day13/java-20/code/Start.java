@@ -3,7 +3,7 @@ import java.util.TreeSet;
 
 class Start{
     public static void main(String[] data){
-        TreeSet s = new TreeSet();
+        TreeSet<String> s = new TreeSet<>();
         s.add("Latte");
         s.add("Mocha");
         s.add("Cappuccino");
