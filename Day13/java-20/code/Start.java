@@ -28,6 +28,9 @@ class Player implements Comparable{
     
     @Override
     public int compareTo(Object o){
+        Player p = (Player)o;
+        if (this.number < p.number) return -1;
+        if (this.number > p.number) return +1;
         return 0;
     }
 }
