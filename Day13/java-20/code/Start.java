@@ -3,6 +3,9 @@ import java.util.*;
 class Start{
     public static void main(String[] data){
         
+        int c = "Latte".compareTo("Mocha");
+        System.out.println(c);
+        
         Player[] list = { new Player("David", 7),
                           new Player("Micheal", 10),
                           new Player("Frank", 8)
