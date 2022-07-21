@@ -122,10 +122,10 @@ Set - A data structure that keep only unique data (ไม่เก็บตั�
 	"Latte".hashCode()
 	"Latte".equals("Latte") ===> true
 
-Map - A data structure that keep value in pair
-'--
-'--
-
+Map - A data structure that keep value in pair (โครงสร้างการเก็บข้อมูลที่จับคู่ระหว่าง
+'-- 											Set ของ Key กับ ข้อมูล Value)
+'-- TreeMap คือ Map ที่สร้างจาก Tree
+'-- HashMap คือ Map ที่สร้างจาก Hash Table
 
 
 In Mathematics:
