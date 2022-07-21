@@ -10,6 +10,11 @@ class Start{
         a.add(7.5); // convert to instance of Double
         a.add("Mocha");
         System.out.println(a);
+        
+        for(Object o : a){
+            System.out.println(o);
+        }
+        // Write code to print only instanceof String
     }
 }
 
