@@ -96,5 +96,76 @@ From Ubuntu:
 sudo apt update
 sudo apt install mysql-server
 service mysql status --> Press 'q' to exit
+sudo service mysql start
+
+Operating System					Database Management System
+OS									DBMS
+-Windows, Linux, iOS				Oracle, SQL Server, MySQL
+
+File: Text File						Database
+'	  Binary File					^
+'-----------------------------------'
+
+Is Excel a DBMS? FOR ME : YES!
+
+From OS to DBMS
+sudo mysql
+
+From DBMS to OS
+exit
+
+MySQL statement;
+- show databases;
+- create database ...(you db name) e.g. inventory;  //ไม่ต้องเติม s, create
+- drop database ...(you db name) e.g. inventory;	//delete
+- create database flying_turtle default character set 'UTF8';
+
+use flying_turtle;
+create table unit
+(
+	code		varchar(60),
+	location	varchar(200),
+	milk		float,
+	head 		integer
+);
+
+create table staff
+(
+	name varchar(200),
+	gender character,
+    salary float
+);
+
+insert into staff(name, gender, salary)
+  values('Mark Z', 'M', 40000.0);
+
+insert into staff(name, gender, salary)
+  values('Sheryl S', 'F', 50000.0); 
+
+
+
+SQL Data Type
+
+Traditional					Modern
+int		`					integer					20
+float						float					2.78
+double						double					3.54
+char						character				'A' or 'M'
+varchar(20)					character varying(20)	'Latte'
+
+How about crytocurrency?
+
+
+
+				  Level 5: Prolog
+				  Level 4: SQL
+			  	  Level 3: Python, JavaScript
+						   Java, 
+						   C
+				  Level 2: Assembler
+						 : MOV R0, 15
+						 : ADD R0, 17
+				  
+Computer Language Level 1: Machine Code
 
 
