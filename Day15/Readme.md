@@ -81,3 +81,20 @@ R	http://123.123.123.123/api/product/show		--> check permission
 U	http://123.123.123.123/api/product/change 	--> check permission
 D	http://123.123.123.123/api/product/remove 	--> check permission	
 
+
+
+
+MySQL
+- Ubuntu	- super easy
+- macOS		- 
+- Windows	- super hard
+
+			https://codestar.work/mysql-windows.pdf
+
+
+From Ubuntu:
+sudo apt update
+sudo apt install mysql-server
+service mysql status --> Press 'q' to exit
+
+
