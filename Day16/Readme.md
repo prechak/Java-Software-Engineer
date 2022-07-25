@@ -211,3 +211,19 @@ Java
 In Node.js
 mysql://jeff:bezos@127.0.0.1/online
 
+
+=====
+
+เปลี่ยน port
+
+	<resources>
+		<resource>
+			<directory>web</directory>
+		<resource>
+	</resources>
+
+	create web
+			'--application.properties
+			
+			write 
+			server.port = your-port
