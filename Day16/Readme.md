@@ -170,8 +170,11 @@ Git / GitHub
 How to use 8-decimal percision in SQL as in Cryptocurrency
 
 
+macOS: /usr/local/mysql/bin/mysql --user root -password [enter]
 
 
+Spring Data JDBC
+================
 
 
 
