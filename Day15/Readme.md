@@ -142,7 +142,61 @@ insert into staff(name, gender, salary)
 insert into staff(name, gender, salary)
   values('Sheryl S', 'F', 50000.0); 
 
+select name from staff;
+select name,salary from staff;
+select * from staff;
 
+=============================================
+
+crate table product
+(
+   name	 character varying(200),
+   name	 character,
+   price float
+);
+
+insert into product(name, size, price)
+  values('Latte', 'S', 80.0);
+insert into product(name, size, price)
+  values('Latte', 'M', 90.0);
+insert into product(name, size, price)
+  values('Latte', 'L', 100.0);
+insert into product(name, size, price)
+  values('Mocha', 'S', 90.0);
+insert into product(name, size, price)
+  values('Mocha', 'M', 100.0);
+insert into product(name, size, price)
+  values('Mocha', 'L', 110.0);
+
+condition
+=========
+
+select * from product where name='Mocha';
+
+select * from product where name='Latte' and price <= 90;
+
+delete from product where name='Mocha' and size='L';
+
+insert into product(name,price,size) values('Mocha',110.0,'L');
+//ถ้าสลับ insert, value ต้องสลับด้วย
+
+Soft-Delete
+===========
+
+normal 		--> delete from staff where name = 'Sheryl S';
+
+Soft-Delete --> alter table staff add status varchar(80);
+				update staff set status='working';
+				update staff set status='resigned' where name='Sheryl S';
+
+Add a new column
+				alter table product add member_price float;
+				update product set member_price = price * 0.85;
+
+				alter table product add staff_price float;
+				alter table product drop staff_price;
+
+=======================================================
 
 SQL Data Type
 
@@ -169,3 +223,13 @@ How about crytocurrency?
 Computer Language Level 1: Machine Code
 
 
+============
+
+Mission
+--------> create newton identified with mysql_native_password by 'calculus';
+
+--------> grant select on flying_turtle.product to newton //ให้ newton อ่านได้อย่างเดียวบน
+															บน table เดียว
+--------> grant select on flying_turtle.* to newton;	  //อ่านได้หมดบน flying_turtle
+--------> grant all on flying_turtle.* to newton;		  //ให้ newton ทำอะไรก็ได้ใน
+															flying_turtle
