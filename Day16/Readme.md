@@ -160,6 +160,10 @@ Average
 select avg(starting_price) from posts where user = 
 (select code from users where email = 'mark@fb.com');
 
+JOIN -> Avoid
+LEFT JOIN -> Much Better
+SUBQUERY - Simple Way
+
 
 Git / GitHub
 ============
