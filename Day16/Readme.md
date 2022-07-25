@@ -73,6 +73,24 @@ add later --> alter table posts add starting_price float;
 //any value can be add default
 // foreign key อ้างอิงกับอีก table
 
+			// Know mark number 1
+		--> insert into posts(topic, detail, user, starting_price, finishing_price)
+				 values('Ford 2020 for sale', '...', 1, 600000, 700000);
+
+			// Unknow number
+		--> insert into posts(topic, detail, user, starting_price, finishing_price)
+				 select 'Toyota 2019', 'Detail 2', code, 450000, 500000
+				 from users where email = 'mark@fb.com;
+
+		--> insert into posts(topic, detail, user, starting_price, finishing_price)
+				 select 'Honda Accord 2021', 'Detail 3', code, 800000, 850000
+				 from users where email = 'mark@fb.com;
+
+		--> insert into posts(topic, detail, user, starting_price, finishing_price)
+				 select 'Benz 2020', 'Detail 4', code, 1800000, 2000000
+				 from users where email = 'bill@msn.com;
+
+
 Encrypting Password
 ===================
 One-way Encrytion (Hashing is confused, please avoid using "hashing")
@@ -96,7 +114,57 @@ There are two kinds of password
 								'----------> Salt
 select sha2 ( concat('mark123', 'Vk3@E%7'),512 );
 
+Join ( means multiply ) --> create cartesian Product
+=======================
+1.select * from users join post;
+2.select * from users join posts on user.code = posts.user;
+3.select users.code, users.email, users.name, post.topic
+	 from users join posts on users.code = posts.user;
+
+
+Left Join (Recommended) or Right Join
+=======================
+-- use the left table as the main table
+
+
+CORRECT:
+select users.code, users.email, users.name, post.topic
+	 from posts left join users on users.code = posts.user;
+
+Subquery:
+=========
+1.select * from post;
+
+2.select *,
+( select users.email from users where posts.users = users.code) as email  
+from posts;
+
+3. select code, topic, detail, user,
+	 (select users.email from users where posts.user = users.code) as email
+	 from posts;
+
+
+Using query without subquery:
+
+select starting_price from posts where user = 1; //if know query
+
+(select code from users where email = 'mark@fb.com');	<-- this is subquery
+
+Mix (Using query ending with subquery)
+===
+select starting_price from posts where user = 
+(select code from users where email = 'mark@fb.com');
+
+Average
+=======
+select avg(starting_price) from posts where user = 
+(select code from users where email = 'mark@fb.com');
+
+
 Git / GitHub
+============
+How to use 8-decimal percision in SQL as in Cryptocurrency
+
 
 
 
