@@ -173,9 +173,41 @@ How to use 8-decimal percision in SQL as in Cryptocurrency
 macOS: /usr/local/mysql/bin/mysql --user root -password [enter]
 
 
+Spring Data
+===========
+'-- JDBC
+'-- JPA
+'-- MongoDB
+
 Spring Data JDBC
-================
+
+java-25
+'--pom.xml
+'--code
+'	'--main
+'		'--Start.java
+'		'--User.java
+'		'--Post.java
+'
+'--test
+	'--main
+		'--Test.java
 
 
+Servlet Stack	-> Blocking
+Reactive Stack -> Non-Blocking
 
+https://codestar.work/spring.pdf
+https://codestar.work/spring-boot.pdf
+https://codestar.work/spring-6.pdf
+
+
+=======
+ไม่ว่าจะอ่านฐานข้อมูลอะไรก็ตามต้องมีสิ่งที่เรียกว่า Connection String ก่อน
+
+Java
+--> jdbc:mysql://127.0.0.1/online?user=jeff&password=bezos
+
+In Node.js
+mysql://jeff:bezos@127.0.0.1/online
 
