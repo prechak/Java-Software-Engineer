@@ -42,7 +42,7 @@ class Setup{
         source.setUrl(connectionString);
         return source;
     }
-    String connectionString = "jdbc:mysql://127.0.0.1/blueshop?user=root" + "&password=P@ssw0rd";
+    String connectionString = "jdbc:mysql://127.0.0.1/online?user=jeff" + "&password=bezos";
 }
 
 @RestController
